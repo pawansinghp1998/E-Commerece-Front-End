@@ -1,0 +1,74 @@
+.header-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  border-bottom: 1px solid rgba(95, 84, 177, 0.4);
+  overflow: hidden;
+  position: fixed;
+  background: #efefef;
+  width: 100%;
+  height: 120px;
+  top: 0;
+  padding: 20px;
+  background: #2874f0;
+  .ant-select-selector {
+    min-width: 150px;
+  }
+}
+a:-webkit-any-link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.product-listing-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 120px;
+  .product-list {
+    box-shadow: 0 0.25rem 0.625rem rgba(66, 72, 78, 0.15);
+    transition: all 300ms ease-in-out;
+    width: 160px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    .product-image {
+      width: 140px;
+      height: 200px;
+    }
+    .supplier-details {
+      color: #878787;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .fabric-details {
+      color: #040101;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .list-price {
+      font-size: 16px;
+      font-weight: 500;
+      color: #212121;
+    }
+    .mrp-price {
+      text-decoration: line-through;
+      font-size: 14px;
+      color: #878787;
+    }
+    .discount {
+      margin-left: 5px;
+      color: #388e3c;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .few-left {
+      font-size: 14px;
+      color: #ff6161;
+      font-weight: 600;
+    }
+  }
+}
