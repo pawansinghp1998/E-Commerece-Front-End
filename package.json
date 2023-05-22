@@ -2,6 +2,7 @@
   "private": true,
   "name": "react-project",
   "version": "0.1.0",
+  "homepage": "http://pawansinghp1998.github.io/E-Commerece-Front-End",
   "scripts": {
     "build": "npm-run-all --sequential build:react",
     "build:react": "node bin/dotenv.js & cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
@@ -10,7 +11,9 @@
     "lint": "eslint ./src --fix --ext .js,.ts,.tsx,.jsx --max-warnings=0",
     "patch": "patch-package",
     "start": "node bin/dotenv.js & cross-env PORT=9000 react-app-rewired start",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -68,6 +71,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.32.2",
+    "gh-pages": "^5.0.0",
     "jest-dom": "^4.0.0",
     "npm-run-all": "4.1.5",
     "prettier": "2.2.1",
