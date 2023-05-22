@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import React, { useEffect, useState } from "react"
 import "./App.scss"
-import { createBrowserRouter, RouterProvider, createHashRouter } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { ProductFilterProvider } from "contexts/FilterProductContext"
 import ProductList from "components/ProductList/ProductList"
 import ProductDetails from "components/ProductDetails/ProductDetails"
@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     setAppIsReady(true)
   }, [])
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <ProductList />,

@@ -2,7 +2,7 @@
   "private": true,
   "name": "react-project",
   "version": "0.1.0",
-  "homepage": "http://pawansinghp1998.github.io/E-Commerece-Front-End",
+  "homepage": "https://pawansinghp1998.github.io/E-Commerece-Front-End",
   "scripts": {
     "build": "npm-run-all --sequential build:react",
     "build:react": "node bin/dotenv.js & cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
