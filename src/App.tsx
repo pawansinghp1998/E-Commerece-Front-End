@@ -1,4 +1,3 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles"
 import React, { useEffect, useState } from "react"
 import "./App.scss"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
