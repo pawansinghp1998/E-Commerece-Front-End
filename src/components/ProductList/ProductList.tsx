@@ -4,11 +4,17 @@ import { useFilter } from "contexts/FilterProductContext"
 import { Select } from "antd"
 import { NavLink } from "react-router-dom"
 import "./ProductList.scss"
+
+interface ISelectData {
+  label: string
+  value: string
+  id: number
+}
 const ProductList = () => {
   const [collectionData, setCollectionData] = useState(collections)
   const { productFilters, setProductFilters } = useFilter()
-  const [filterBrandsOption, setFilterBrandsOption] = useState<any[]>([])
-  const [filterFabricOption, setFilterFabricOption] = useState<any[]>([])
+  const [filterBrandsOption, setFilterBrandsOption] = useState<ISelectData[]>([])
+  const [filterFabricOption, setFilterFabricOption] = useState<ISelectData[]>([])
 
   const sortOptions = [
     { label: "LowToHigh", value: "LowToHigh", id: 1 },
@@ -18,8 +24,8 @@ const ProductList = () => {
   ]
 
   useEffect(() => {
-    const brandsOptions: any[] = []
-    const fabricOptions: any[] = []
+    const brandsOptions: ISelectData[] = []
+    const fabricOptions: ISelectData[] = []
     if (collections.length > 0) {
       collections.forEach((item) => {
         if (!brandsOptions.find((brand) => brand?.label === item.supplierName)) {
